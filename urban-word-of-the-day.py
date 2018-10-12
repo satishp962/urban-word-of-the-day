@@ -39,7 +39,7 @@ class UrbanWordRetriever(object):
     def __get_elements_of_class(class_name, soup):
         elements = []
         for div in soup.findAll('div', attrs={'class': class_name}):
-            elements.append('\n'.join(div.findAll(text=True)).strip())
+            elements.append(''.join(div.findAll(text=True)).strip())
         return elements
 
     def retrieve(self):
